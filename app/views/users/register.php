@@ -11,16 +11,17 @@
                     <form class="form" role="form" action="<?php echo URLROOT.'/users/register'?>" method="post">
                         <div class="form-group">
                             <label for="name">Name<sup>*</sup></label>
-                            <input type="text" class="form-control <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" id="name" placeholder="Full name" name="name">
+                            <input type="text" class="form-control <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>" id="name" placeholder="Full name" name="name" value="<?php echo $data['name']?>">
                             <span class="invalid-feedback"><?php echo $data['name_err'];?></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email<sup>*</sup></label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                            <input type="text" class="form-control <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" id="email" placeholder="Email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="password">Password<sup>*</sup></label>
                             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                        <span class="invalid-feedback"><?php echo $data['email_err'];?></span>
                         </div>
                         <div class="form-group">
                             <label for="confirm_password">Verify password<sup>*</sup></label>
