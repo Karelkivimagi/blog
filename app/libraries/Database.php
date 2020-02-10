@@ -15,8 +15,7 @@ class Database
   /**
    * Database constructor.
    */
-  public function __construct()
-  {
+  public function __construct(){
     $dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
     $options = array(
       PDO::ATTR_PERSISTENT => true,
@@ -24,8 +23,8 @@ class Database
     );
     try {
       $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
-    } catch (PDOException $e){
-      $this->error = $e->getMessage();
+    } catch (PDOException $exception){
+      $this->error = $exception->getMessage();
       echo $this->error.'<br>';
     }
   }
@@ -34,7 +33,7 @@ class Database
     $this->stmt = $this->dbh->prepare($sql);
   }
 
-  public function bind($param, $value, $type=null){
+  public function bind($param, $value, $type = null){
     if(is_null($type)){
       switch (true){
         case is_int($value):
@@ -54,7 +53,7 @@ class Database
   }
 
   public function execute(){
-   return $this->stmt->execute();
+    return $this->stmt->execute();
   }
 
   public function getAll(){
