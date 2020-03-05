@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2020 at 08:13 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Loomise aeg: Jaan 28, 2020 kell 08:13 EL
+-- Serveri versioon: 10.4.8-MariaDB
+-- PHP versioon: 7.3.11
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

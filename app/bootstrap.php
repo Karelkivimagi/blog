@@ -8,5 +8,5 @@ require_once 'helpers/session_helper.php';
 
 // Auto Load libraries
 spl_autoload_register(function ($className){
-  require_once 'libraries/'.$className.'.php';
+    require_once 'libraries/'.$className.'.php';
 });
